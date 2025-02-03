@@ -1,0 +1,39 @@
+.hero {
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 70%;
+        height: 5px;
+        background-color: white;
+        left: 15%;
+        bottom: 0;
+    }
+
+    &::after {
+        content: "\f005";
+        font-family: "Font Awesome 5 Free";
+        font-weight: bold;
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        padding: 4px;
+        background-color: #00BBA7;
+        transform: translateX(-50%);
+        color: white;
+    }
+}
+
+.white-bg {
+    .hero {
+        &::before {
+            background-color: #314158;
+        }
+
+        &::after {
+            background-color: white;
+            color: #314158;
+        }
+    }
+}
